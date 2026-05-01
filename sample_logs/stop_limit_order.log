@@ -1,0 +1,8 @@
+2026-05-01 20:18:39 | INFO     | trading_bot.cli | Validated input: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'STOP_LIMIT', 'quantity': 0.01, 'price': 89500.0, 'stop_price': 90000.0}
+2026-05-01 20:18:39 | INFO     | trading_bot.client | BinanceClient initialised — base URL: https://testnet.binancefuture.com
+2026-05-01 20:18:39 | INFO     | trading_bot.orders | Initiating STOP_LIMIT order: symbol=BTCUSDT side=SELL qty=0.01 stop_price=90000.0 price=89500.0 tif=GTC
+2026-05-01 20:18:39 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=SELL type=STOP qty=0.01 price=89500.0
+2026-05-01 20:18:39 | DEBUG    | trading_bot.client | POST https://testnet.binancefuture.com/fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP', 'quantity': 0.01, 'price': 89500.0, 'stopPrice': 90000.0, 'timeInForce': 'GTC', 'timestamp': 1777646919456}
+2026-05-01 20:18:39 | DEBUG    | trading_bot.client | Response 400: {"code":-4120,"msg":"Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."}
+2026-05-01 20:18:39 | ERROR    | trading_bot.client | Binance API error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-05-01 20:18:39 | ERROR    | trading_bot.orders | Binance error placing STOP_LIMIT order: STOP_LIMIT orders are not supported on the Binance Futures Testnet. This order type works correctly on the mainnet. Use MARKET or LIMIT orders for testnet testing.
