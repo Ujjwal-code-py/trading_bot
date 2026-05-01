@@ -1,0 +1,13 @@
+# Credentials
+.env
+
+# Virtual environments
+env/
+myenv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Logs
+logs/
